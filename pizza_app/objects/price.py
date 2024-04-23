@@ -1,7 +1,13 @@
-class Price(Pizza):
+class Price:
 
-    def __init__(self, seznam):  # price jako dictionary
-        self.seznam = seznam
+    def __init__(self, integer, fraction):  # price jako dictionary
+        self.__integer = integer
+        self.__fraction = fraction
 
-    def cena(self):
-        if name and size in Pizza:
+    def get_price(self):
+        return self.__integer + self.__fraction / 100
+
+    def __str__(self):
+        return f"{self.__integer},{self.__fraction}"
+
+    
